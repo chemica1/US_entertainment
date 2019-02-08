@@ -1,10 +1,10 @@
 // Replace these credentials with your Firebase credentials
 
 export const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY",
-  authDomain: "YOUR_DOMAIN.firebaseapp.com",
-  databaseURL: "https://YOUR_DOMAIN.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_BUCKET.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID"
+  apiKey: "AIzaSyAlaK5P1gGumz91LwTZczlVAc7pdzmnXSk",
+  authDomain: "usentainment-423d3.firebaseapp.com",
+  databaseURL: "https://usentainment-423d3.firebaseio.com",
+  projectId: "usentainment-423d3",
+  storageBucket: "usentainment-423d3.appspot.com",
+  messagingSenderId: "823882387300"
 };

@@ -8,11 +8,11 @@ class NavBar extends React.Component {
       <nav className='navbar'>
         <ul>
           <li>
-            <NavLink className='navbar-brand' to='/'>React Admin Dashboard</NavLink>
+            <NavLink className='navbar-brand' to='/'>US Entertainment</NavLink>
           </li>
           <li className='navSection'>
-            <NavLink className='navLink' to='/signIn'>Sign In</NavLink>
-            <NavLink className='navLink' to='/signUp'>Sign Up</NavLink>
+            <NavLink className='navLink' to='/signIn'>로그인</NavLink>
+            <NavLink className='navLink' to='/signUp'>가입</NavLink>
           </li>
         </ul>      
       </nav>  
