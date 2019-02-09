@@ -10,7 +10,7 @@ class Menu extends React.Component {
     return (
       <div>
         <div className='brand'>
-          <h2 className='title'>React Admin</h2>
+          <h2 className='title'>관리자 화면</h2>
         </div>
         <ul>
           <MenuItem link='/' linkText='Dashboard' iconName='tachometer' />
