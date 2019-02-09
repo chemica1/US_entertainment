@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import Menu from './Menu';
+import _Menu from './Menu';
 import Main from './Main';
 import Profile from './Profile';
 import Products from './Products';
@@ -10,6 +10,63 @@ import Customers from './Customers';
 import Orders from './Orders';
 import Analytics from './Analytics';
 import Settings from './Settings';
+import { Button, Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import './menuButton.css';
+
+
+
+
+export default class SidebarExampleDimmed extends React.Component {
+  state = { visible: false }
+
+  handleHideClick = () => this.setState({ visible: false })
+  handleShowClick = () => this.setState({ visible: true })
+  handleSidebarHide = () => this.setState({ visible: false })
+
+  render() {
+    const { visible } = this.state
+
+    return (
+      <div className='fluid-container'>
+         
+          <Button disabled={visible} onClick={this.handleShowClick} className='menuButton'>
+            ☰
+          </Button>
+        <div className='row'>
+          <Sidebar
+            as={Menu}
+            animation='overlay'
+            icon='labeled'
+            inverted
+            onHide={this.handleSidebarHide}
+            vertical
+            visible={visible}
+            width='thin'
+          >
+          <_Menu/>
+          </Sidebar>
+
+          <div className='main col-md-12'>       
+              <div className='fluid-container'>
+              <Route exact path='/' component={Main} />
+              <Route path='/profile' component={Profile} />
+              <Route path='/products' component={Products} />
+              <Route path='/shop' component={Shop} />
+              <Route path='/customers' component={Customers} />
+              <Route path='/orders' component={Orders} />
+              <Route path='/analytics' component={Analytics} />
+              <Route path='/settings' component={Settings} />
+             </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+
+
+/*
 
 const Dashboard = () => 
   <div className='fluid-container'>
@@ -33,3 +90,4 @@ const Dashboard = () =>
   </div>;
 
 export default Dashboard;
+*/

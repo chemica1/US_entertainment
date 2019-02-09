@@ -65,6 +65,7 @@ b,
 strong {
   font-weight: bolder; }
 
+
 code,
 kbd,
 samp {
@@ -158,6 +159,7 @@ legend {
   max-width: 100%;
   padding: 0;
   white-space: normal; }
+
 
 progress {
   display: inline-block;
