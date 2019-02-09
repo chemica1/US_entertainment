@@ -40,7 +40,7 @@ class SignIn extends React.Component {
           <NavBar />
           <div className='authForm'>
             <Card centered className='vCard'>
-              <h1>Sign In</h1>
+              <h1>관리자 로그인</h1>
               <Divider />
               {this.renderError()}
               <SignInForm onSubmit={this.onSubmit} />
