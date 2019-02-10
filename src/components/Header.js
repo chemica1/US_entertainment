@@ -4,7 +4,7 @@ import AccountMenu from './AccountMenu';
 class Header extends React.Component {
   render() {
     return (
-      <div className='header'>
+      <div className='header' >
         <h1>{this.props.pageTitle}</h1>
         <nav className='headerNav pullRight'>
           <AccountMenu />

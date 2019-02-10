@@ -28,7 +28,6 @@ export default class SidebarExampleDimmed extends React.Component {
 
     return (
       <div className='fluid-container'>
-         
           <Button disabled={visible} onClick={this.handleShowClick} className='menuButton'>
             ☰
           </Button>
@@ -42,6 +41,7 @@ export default class SidebarExampleDimmed extends React.Component {
             vertical
             visible={visible}
             width='thin'
+            className='aside col-md-2 col-sm-3 sidebarMenu'
           >
           <_Menu/>
           </Sidebar>
