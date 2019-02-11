@@ -6,11 +6,7 @@ class Header extends React.Component {
     return (
       <div className='header' >
         <h1>{this.props.pageTitle}</h1>
-        <nav className='headerNav pullRight'>
-          <AccountMenu />
-        </nav>
       </div>
-      
     );
   }
 }

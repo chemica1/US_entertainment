@@ -3,9 +3,9 @@ import Header from '../components/Header';
 
 const Profile = () =>
   <div className='profileContainer'>
-    <Header pageTitle='Profile' />
+    <Header pageTitle='프로필' />
     <div className='mainContainer'>
-      <h2>This is Profile</h2>
+      <h2>관리자 프로필 (구현중)</h2>
     </div>
   </div>;
 

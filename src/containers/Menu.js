@@ -1,6 +1,7 @@
 import React from 'react';
 
 import MenuItem from '../components/MenuItem';
+import AccountMenu from '../components/AccountMenu'; 
 
 class Menu extends React.Component {
 
@@ -10,18 +11,17 @@ class Menu extends React.Component {
     return (
       <div>
         <div className='brand'>
-          <h2 className='title'>관리자 화면</h2>
+          <h2 className='title'>관리자 목록</h2>
         </div>
         <ul>
-          <MenuItem link='/' linkText='Dashboard' iconName='tachometer' />
-          <MenuItem link='/profile' linkText='Profile' iconName='cog' />
-          <MenuItem link='/shop' linkText='Shop' iconName='shopping-cart' />
-          <MenuItem link='/products' linkText='Products' iconName='tags' />
-          <MenuItem link='/orders' linkText='Orders' iconName='list' />
-          <MenuItem link='/customers' linkText='Customers' iconName='group' />
-          <MenuItem link='/analytics' linkText='Analytics' iconName='bar-chart' />
-          <MenuItem link='/settings' linkText='Settings' iconName='gear' />
+          <MenuItem link='/' linkText='대시보드' iconName='tachometer' />
+          <MenuItem link='/orders' linkText='판매현황' iconName='list' />
+          <MenuItem link='/profile' linkText='프로필' iconName='tags' />
+          <MenuItem link='/settings' linkText='원격제어' iconName='gear' />
         </ul> 
+        <div className='logout'>
+        <AccountMenu />
+        </div>
       </div>
       
     );
@@ -29,3 +29,12 @@ class Menu extends React.Component {
 }
 
 export default Menu;
+
+
+/*
+<MenuItem link='/customers' linkText='Customers' iconName='group' />
+<MenuItem link='/analytics' linkText='Analytics' iconName='bar-chart' />
+          <MenuItem link='/shop' linkText='Shop' iconName='shopping-cart' />
+
+          <MenuItem link='/products' linkText='Products' iconName='tags' />
+          */

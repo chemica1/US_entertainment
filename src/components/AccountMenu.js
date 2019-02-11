@@ -10,7 +10,7 @@ class AccountMenu extends React.Component {
   render() {
     return (          
       <div className='accountMenu'>
-        <button className='btnCommon btnOutline' onClick={this.signOut}>Sign Out</button>
+        <button className='btnCommon btnOutline' onClick={this.signOut}>로그아웃</button>
       </div>  
     );
   }

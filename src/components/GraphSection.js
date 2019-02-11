@@ -73,7 +73,7 @@ class GraphSection extends React.Component {
       <section className='graphSection'>
         <div className='row'>
           <div className='col-md-8'>
-            <h2>Revenue and Traffic</h2>
+            <h2>월 매출 추이</h2>
             <ResponsiveContainer width="100%" height={400}>
               <ComposedChart
                 data={DATA}
@@ -90,7 +90,7 @@ class GraphSection extends React.Component {
             
           </div>
           <div className='col-md-4'>
-            <h2>Product Sales</h2>
+            <h2>기기별 매출비</h2>
             <ResponsiveContainer width="100%" height={378}>
               <AreaChart 
                 data={PRODUCTS}
