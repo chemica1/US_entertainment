@@ -19,8 +19,7 @@ import './menuButton.css';
 export default class SidebarExampleDimmed extends React.Component {
   state = { visible: false }
 
-  handleHideClick = () => this.setState({ visible: false })
-  handleShowClick = () => this.setState({ visible: true })
+  handleShowClick = () =>{this.state.visible? this.setState({visible: false }) : this.setState({visible: true })}
   handleSidebarHide = () => this.setState({ visible: false })
 
   render() {
@@ -37,6 +36,7 @@ export default class SidebarExampleDimmed extends React.Component {
             animation='overlay'
             icon='labeled'
             inverted
+            onClick={this.handleShowClick}
             onHide={this.handleSidebarHide}
             vertical
             visible={visible}
