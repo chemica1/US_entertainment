@@ -8,13 +8,30 @@ class Overview extends React.Component {
       <section className='overview'>
         <div className='row'>
           <div className='col-sm-3'>
-            <HCard iconName='tags' backgroundColor='tealBG' label='관리 대수' number={3} suffix='대' />
+            <HCard
+             iconName='tags'
+             backgroundColor='tealBG'
+             label='관리 대수'
+             DBtitle='numberOfMachines'
+             suffix='대'
+            />
           </div>
           <div className='col-sm-4'>
-            <HCard iconName='won sign icon' backgroundColor='pinkBG' label='일 매출' number={1256} suffix='원' />
+            <HCard iconName='won sign icon'
+             backgroundColor='pinkBG'
+             label='일 매출'
+             DBtitle='dailySale'
+             suffix='원'
+            />
           </div>
           <div className='col-sm-5'>
-            <HCard iconName='calendar alternate outline icon' backgroundColor='amberBG' label='월 매출' number={178356} suffix='원' />
+            <HCard
+             iconName='calendar alternate outline icon'
+             backgroundColor='amberBG'
+             label='월 매출'
+             DBtitle='monthlySale'
+             suffix='원'
+            />
           </div>
        
         </div>

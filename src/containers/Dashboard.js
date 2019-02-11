@@ -50,11 +50,7 @@ export default class SidebarExampleDimmed extends React.Component {
               <div className='fluid-container'>
               <Route exact path='/' component={Main} />
               <Route path='/profile' component={Profile} />
-              <Route path='/products' component={Products} />
-              <Route path='/shop' component={Shop} />
-              <Route path='/customers' component={Customers} />
               <Route path='/orders' component={Orders} />
-              <Route path='/analytics' component={Analytics} />
               <Route path='/settings' component={Settings} />
              </div>
           </div>
@@ -67,6 +63,14 @@ export default class SidebarExampleDimmed extends React.Component {
 
 
 /*
+
+              <Route path='/analytics' component={Analytics} />
+              
+              <Route path='/products' component={Products} />
+              <Route path='/shop' component={Shop} />
+              <Route path='/customers' component={Customers} />
+
+
 
 const Dashboard = () => 
   <div className='fluid-container'>
