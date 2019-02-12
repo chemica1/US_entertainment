@@ -13,27 +13,27 @@ import {
 } from 'recharts';
 
 const DATA = [
-  { month: 'Jan', revenue: 125123, visitors: 171282  },
-  { month: 'Feb', revenue: 105467, visitors: 152382  },
-  { month: 'Mar', revenue: 86345,  visitors: 256222  },
-  { month: 'Apr', revenue: 192567, visitors: 302823  },
-  { month: 'May', revenue: 135836, visitors: 223563  },
-  { month: 'Jun', revenue: 93536,  visitors: 234674  },
-  { month: 'Jul', revenue: 182576, visitors: 345143  },
-  { month: 'Aug', revenue: 76737,  visitors: 176332  },
-  { month: 'Sep', revenue: 162342, visitors: 223425  },
-  { month: 'Oct', revenue: 114764, visitors: 340289  },
-  { month: 'Nov', revenue: 204695, visitors: 426264  },
-  { month: 'Dec', revenue: 232687, visitors: 456292  }
+  { month: 'Jan', sale: 125123, orders: 171282  },
+  { month: 'Feb', sale: 105467, orders: 152382  },
+  { month: 'Mar', sale: 86345,  orders: 256222  },
+  { month: 'Apr', sale: 192567, orders: 302823  },
+  { month: 'May', sale: 135836, orders: 223563  },
+  { month: 'Jun', sale: 93536,  orders: 234674  },
+  { month: 'Jul', sale: 182576, orders: 345143  },
+  { month: 'Aug', sale: 76737,  orders: 176332  },
+  { month: 'Sep', sale: 162342, orders: 223425  },
+  { month: 'Oct', sale: 114764, orders: 340289  },
+  { month: 'Nov', sale: 204695, orders: 426264  },
+  { month: 'Dec', sale: 232687, orders: 456292  }
 ];
 
 const PRODUCTS = [
-  { month: 'Jan', accessories: 234, phones: 178, laptops: 112 },
-  { month: 'Feb', accessories: 325, phones: 155, laptops: 161 },
-  { month: 'Mar', accessories: 202, phones: 145, laptops: 191 },
-  { month: 'Apr', accessories: 228, phones: 168, laptops: 111 },
-  { month: 'May', accessories: 347, phones: 171, laptops: 114 },
-  { month: 'Jun', accessories: 304, phones: 158, laptops: 111 }
+  { month: 'Jan', 1: 234, 2: 178, 3: 112 },
+  { month: 'Feb', 1: 325, 2: 155, 3: 161 },
+  { month: 'Mar', 1: 202, 2: 145, 3: 191 },
+  { month: 'Apr', 1: 228, 2: 168, 3: 111 },
+  { month: 'May', 1: 347, 2: 171, 3: 114 },
+  { month: 'Jun', 1: 304, 2: 158, 3: 111 }
 ];
 
 const getPercent = (value, total) => {
@@ -83,8 +83,8 @@ class GraphSection extends React.Component {
                 <Tooltip />
                 <Legend margin={{ top: 20 }} />
                 <CartesianGrid strokeDasharray='3 3' />
-                <Area type='monotone' dataKey='visitors' fill='#efefef' name='Visitors' />
-                <Bar dataKey='revenue' barSize={30} fill='#8BC34A' name='Revenue' />
+                <Area type='monotone' dataKey='orders' fill='#efefef' name='orders' />
+                <Bar dataKey='sale' barSize={30} fill='#8BC34A' name='sale' />
               </ComposedChart>
             </ResponsiveContainer>
             
@@ -99,9 +99,9 @@ class GraphSection extends React.Component {
                   <XAxis dataKey='month' />
                   <YAxis tickFormat={toPercent} />
                   <Tooltip content={renderTooltipContent}/>
-                  <Area type='monotone' dataKey='accessories' stackId="1" stroke='#8884d8' fill='#8884d8' />
-                  <Area type='monotone' dataKey='phones' stackId="1" stroke='#82ca9d' fill='#82ca9d' />
-                  <Area type='monotone' dataKey='laptops' stackId="1" stroke='#ffc658' fill='#ffc658'/>
+                  <Area type='monotone' dataKey='1' stackId="1" stroke='#8884d8' fill='#8884d8' />
+                  <Area type='monotone' dataKey='2' stackId="1" stroke='#82ca9d' fill='#82ca9d' />
+                  <Area type='monotone' dataKey='3' stackId="1" stroke='#ffc658' fill='#ffc658'/>
               </AreaChart>
             </ResponsiveContainer>
           </div>
