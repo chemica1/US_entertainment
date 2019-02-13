@@ -6,7 +6,7 @@ import GraphSection from '../components/GraphSection';
 
 class Main extends React.Component {
   render()  {
-    return (  
+    return (
       <div>
         <Header pageTitle='대시보드'/>
         <Overview />

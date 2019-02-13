@@ -2,19 +2,17 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import CountTo from 'react-count-to';
 import firebase from "firebase";
-import { firebaseConfig } from '../config';
 
 
 
 function fetchDB(uid, DBtitle){
-  const fetchedDB = firebase.database().ref('users/' + uid).child(DBtitle);
+  const fetchedDB = firebase.database().ref('users/' + uid +'/vm-001').child(DBtitle);
   return fetchedDB;
 }
 
 export default class HCard extends React.Component {
   constructor(props){
     super(props);
-    !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
     this.state={
       DBInfo : 0,
       DBtitle : this.props.DBtitle
@@ -24,8 +22,6 @@ export default class HCard extends React.Component {
   componentDidMount(){
     const uid = firebase.auth().currentUser.uid;
     const DBtitle = this.state.DBtitle;
-    console.log(uid)
-    console.log(this.state.DBtitle)
     let fetchedDB = fetchDB(uid, DBtitle);
     fetchedDB.on('value', snap=>{
       this.setState({
