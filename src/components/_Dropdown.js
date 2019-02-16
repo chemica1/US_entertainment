@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
-import './Header.css';
-
 import { Grid, Dropdown, Form } from 'semantic-ui-react'
 import firebase from "firebase";
 
-
-class Header extends React.Component {
-  constructor(props){
+export default class _Dropdown extends Component {
+ constructor(props){
     super(props);
     this.state={
          options :[],
@@ -25,29 +22,39 @@ class Header extends React.Component {
   });
 }
 
+  handleChange = (e, { name, value }) => this.setState({ [name]: value })
 
-handleChange = (e, { name, value }) => this.setState({ [name]: value })
-
- 
   render() {
     return (
-      <div className='header' >
-        <div className='left'></div>
-        <div className='headerTitle'>{this.props.pageTitle}</div>
-        <div className='right'>
-        <Dropdown
+    
+              <Dropdown
                 simple
                 name='default'
                 options={this.state.options}
                 placeholder='자판기목록'
                 onChange={this.handleChange}
-        />
-        </div>
-      </div>
-    );
+              />
+         
+    )
   }
 }
 
-export default Header;
 
-
+/*
+   <Grid columns='equal'>
+        <Grid.Column>
+          <Form>
+              <Dropdown
+                simple
+                name='default'
+                options={this.state.options}
+                placeholder='자판기목록'
+                onChange={this.handleChange}
+              />
+          </Form>
+        </Grid.Column>
+        <Grid.Column>
+          <pre>{JSON.stringify(this.state.default, null, 2)}</pre>
+        </Grid.Column>
+      </Grid>
+      */
