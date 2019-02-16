@@ -41,6 +41,7 @@ handleChange = (e, { name, value }) => this.setState({ [name]: value })
                 options={this.state.options}
                 placeholder='자판기목록'
                 onChange={this.handleChange}
+                onChange={this.props.clickHandler}
         />
         </div>
       </div>
