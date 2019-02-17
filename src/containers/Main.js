@@ -7,25 +7,20 @@ import GraphSection from '../components/GraphSection';
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+    this.state = { name: 0 };
     this.outputEvent = this.outputEvent.bind(this);
 }
-/*
-outputEvent(event) {
-  // the event context comes from the Child
-  this.setState({ count: this.state.count++ });
-}*/
 
-outputEvent = (e, { value }) => this.setState({count : value })
+outputEvent = (e, { value }) => this.setState({name : value })
 
   render()  {
     const variable = 5;
     return (
       <div>
         <Header pageTitle='대시보드' clickHandler={this.outputEvent}/>
-        <Overview />
+        <Overview name={this.state.name} />
         <GraphSection />
-        Count: { this.state.count }
+        name: { this.state.name }
       </div>
     );
   }

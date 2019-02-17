@@ -4,7 +4,7 @@ import LatestSection from '../components/LatestSection';
 
 const Orders = () =>
   <div className='ordersContainer'>
-    <Header pageTitle='실시간 판매현황' />
+    <Header pageTitle='판매현황' />
     <div className='mainContainer'>
       <h2>실시간 판매현황(구현중)</h2>
     </div>

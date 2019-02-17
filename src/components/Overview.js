@@ -22,6 +22,7 @@ class Overview extends React.Component {
              label='일 매출'
              DBtitle='dailySale'
              suffix='원'
+             nameOfMachine={this.props.name}
             />
           </div>
           <div className='col-sm-5'>
@@ -31,6 +32,7 @@ class Overview extends React.Component {
              label='월 매출'
              DBtitle='monthlySale'
              suffix='원'
+             nameOfMachine={this.props.name}
             />
           </div>
        
